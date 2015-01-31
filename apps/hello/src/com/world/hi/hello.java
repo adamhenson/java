@@ -16,32 +16,32 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(description = "My First Servlet", urlPatterns = { "/hello" , "/hello.do"}, initParams = {@WebInitParam(name="id",value="1"),@WebInitParam(name="name",value="adamhenson")})
 public class hello extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	public static final String HTML_START="<html><body>";
-    public static final String HTML_END="</body></html>";
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public hello() {
-    	// TODO Auto-generated constructor stub
-    }
+  private static final long serialVersionUID = 1L;
+  public static final String HTML_START="<html><body>";
+  public static final String HTML_END="</body></html>";
+   
+  /**
+   * @see HttpServlet#HttpServlet()
+   */
+  public hello() {
+    // TODO Auto-generated constructor stub
+  }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-        out.println(HTML_START + "<h1>" + request.getContextPath() + "</h1>");
-        Date date = new Date();
-        out.println("<h2>Hi There!</h2><br/><h3>Date="+date +"</h3>"+HTML_END);
-    }
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    PrintWriter out = response.getWriter();
+    out.println(HTML_START + "<h1>" + request.getContextPath() + "</h1>");
+    Date date = new Date();
+    out.println("<h2>Hi There!</h2><br/><h3>Date="+date +"</h3>"+HTML_END);
+  }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
+  /**
+   * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // TODO Auto-generated method stub
+  }
 
 }
